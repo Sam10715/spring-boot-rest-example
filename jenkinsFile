@@ -10,6 +10,7 @@ pipeline {
        
         stage('Test') { 
             steps {
+			    checkout scm
                 echo "Hello it is me"
                 bat "mvn clean test " 
             }
