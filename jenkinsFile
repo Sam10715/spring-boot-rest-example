@@ -9,8 +9,8 @@ pipeline {
    
    
    
- //  parameters {
-  //      string(name: 'branch-name', defaultValue: 'master', description: 'which branch you want to checkout?')}
+   parameters {
+        string(name: 'branch-name', defaultValue: 'master', description: 'which branch you want to checkout?')}
     stages {
        
         stage('Test') { 
@@ -21,7 +21,7 @@ pipeline {
 		
 		stage('git checkout branch') { 
             steps {
-			    bat "git checkout -b new-branch" 
+			    bat "git checkout --track origin/${branch-name}" 
 			    bat "git branch"
 		
 		}
