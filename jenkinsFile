@@ -33,7 +33,7 @@ pipeline {
 	stage("make artifact in master case"){
 	steps{
 	script {
-                    if (${env.BRANCH_NAME}E == 'master') {
+                    if (${env.BRANCH_NAME} == 'master') {
                         
 			echo "my commit is ${env.commit}"
 			bat "git checkout ${env.commit}"
