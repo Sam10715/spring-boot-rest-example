@@ -14,7 +14,7 @@ pipeline {
         stage('Test') { 
             steps {
 			    checkout scm
-                bat "git checkout branch ${branch-name}"
+                bat "git checkout branch "${branch-name}""
                 bat "mvn clean" 
             }
         }
