@@ -7,6 +7,8 @@ pipeline {
     jdk 'JDK8'
    }
    
+   
+   
    parameters {
         string(name: 'branch-name', defaultValue: 'master', description: 'which branch you want to checkout?')}
     stages {
@@ -15,8 +17,8 @@ pipeline {
             steps {
 			    checkout scm
 			    script{
-			    echo "my branch name is ${branch-name}"
-                bat "git checkout branch ${branch-name}"
+			    echo "my branch name is ${env.branch-name}"
+                bat "git checkout branch ${env.branch-name}"
                 bat "mvn clean" 
 		}
             }
