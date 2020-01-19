@@ -17,6 +17,7 @@ pipeline {
 	stage("git branch"){
 	steps(){
 	bat "git branch"
+	echo "${env.BRANCH_NAME}"
 	}
 		}
 	stage("create branch"){
