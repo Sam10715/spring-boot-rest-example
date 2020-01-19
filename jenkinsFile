@@ -16,12 +16,16 @@ pipeline {
         stage('Test') { 
             steps {
 			    checkout scm
-			    script{
-			 //  echo "my branch is $branch-name"
+		
+		}
+			   steps{
+			   script{
+			  // echo "my branch is $branch-name"
                 bat "git branch"
                 bat "mvn clean" 
-		}
-            }
+		
+		
+            }}
         }
         
         }
