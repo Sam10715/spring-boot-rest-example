@@ -6,6 +6,9 @@ pipeline {
     maven 'Maven'
     jdk 'JDK8'
    }
+   
+   parameters {
+        string(name: 'branch-name', defaultValue: 'master', description: 'which branch you want to checkout?')}
     stages {
        
         stage('Test') { 
