@@ -19,12 +19,13 @@ pipeline {
 		}}
 		
 		
-	stage("make snapshot ){
+	stage("make snapshot" ){
 	script {
                     if (env.BRANCH_NAME == 'master') {
                         
 			echo "test master"
 			commit= $GIT_COMMIT
+			echo "commit"
 			
                     } else {
                         echo "test feature"
@@ -35,7 +36,7 @@ pipeline {
 	script {
                     if (env.BRANCH_NAME == 'master') {
                         
-			
+			echo "commit"
 			bat "git checkout ${env.commit}"
 			echo "deploy the artifcat"
 			
