@@ -17,6 +17,7 @@ pipeline {
 		
 		
 	stage("make snapshot" ){
+	steps{
 	script {
                     if (env.BRANCH_NAME == 'master') {
                         
@@ -27,7 +28,7 @@ pipeline {
                     } else {
                         echo "test feature"
                     }
-        
+        }
         }}
 	stage("make artifact in master case"){
 	script {
