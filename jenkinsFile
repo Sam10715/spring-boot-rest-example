@@ -21,7 +21,8 @@ pipeline {
 		
 		stage('git checkout branch') { 
             steps {
-			    bat "git checkout --track origin/${branchName}" 
+	    			echo "${params.branchName}"
+			    //bat "git checkout --track origin/${branchName}" 
 			    bat "git branch"
 		
 		}
