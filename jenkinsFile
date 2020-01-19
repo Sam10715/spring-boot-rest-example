@@ -9,15 +9,15 @@ pipeline {
    
    
    
-   parameters {
-        string(name: 'branch-name', defaultValue: 'master', description: 'which branch you want to checkout?')}
+ //  parameters {
+  //      string(name: 'branch-name', defaultValue: 'master', description: 'which branch you want to checkout?')}
     stages {
        
         stage('Test') { 
             steps {
 			    checkout scm
 			    script{
-			   echo "my branch is $branch-name"
+			 //  echo "my branch is $branch-name"
                 bat "git branch"
                 bat "mvn clean" 
 		}
