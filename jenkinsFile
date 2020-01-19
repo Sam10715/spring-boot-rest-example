@@ -23,7 +23,7 @@ pipeline {
                         
 			echo "test master"
 			commit= $GIT_COMMIT
-			echo "commit"
+			echo " my commit is ${env.commit}"
 			
                     } else {
                         echo "test feature"
@@ -35,7 +35,7 @@ pipeline {
 	script {
                     if (env.BRANCH_NAME == 'master') {
                         
-			echo "commit"
+			echo "my commit is ${env.commit}"
 			bat "git checkout ${env.commit}"
 			echo "deploy the artifcat"
 			
