@@ -21,7 +21,8 @@ pipeline {
 		
 		stage('git checkout branch') { 
             steps {
-			    bat "git branch" 
+			    bat "git branch -b new-branch" 
+			    bat "git branch"
 		
 		}
 		
