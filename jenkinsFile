@@ -18,6 +18,13 @@ pipeline {
 			    checkout scm
 		
 		}
+		
+		stage('git checkout branch') { 
+            steps {
+			    bat "git branch" 
+		
+		}
+		
 			  
         }
         
