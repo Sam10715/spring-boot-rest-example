@@ -7,11 +7,8 @@ pipeline {
    }
    
    
+   stages{
    
-   parameters {
-        string(name: 'branchName', defaultValue: 'master', description: 'which branch you want to checkout?')}
-    stages {
-       
         stage('Test') { 
             steps {
 			    checkout scm
@@ -53,3 +50,4 @@ pipeline {
 	
 	
     }
+}
