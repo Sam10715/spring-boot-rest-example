@@ -31,6 +31,7 @@ pipeline {
         }
         }}
 	stage("make artifact in master case"){
+	steps{
 	script {
                     if (env.BRANCH_NAME == 'master') {
                         
@@ -43,7 +44,7 @@ pipeline {
                     }
         
         }
-	
+	}
 	}
 	
 	
