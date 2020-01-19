@@ -18,8 +18,8 @@ pipeline {
 	stage("create branch"){
 	steps(){
 	script(){
-	bat "git checkout -b release1"
-	bat "git push -u origin release1"
+	bat "git checkout -b release3"
+	bat "git push --set-upstream release3 release3"
 	}
 	
 	
