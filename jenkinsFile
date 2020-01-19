@@ -17,7 +17,7 @@ pipeline {
             steps {
 			    checkout scm
 		
-		}
+		}}
 		
 		stage('git checkout branch') { 
             steps {
