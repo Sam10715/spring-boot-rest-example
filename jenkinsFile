@@ -15,8 +15,8 @@ pipeline {
 		
 		}}
 	stage("git branch"){
-	steps(
-	bat "git branch")
+	steps(){
+	bat "git branch"
 	}
 		
 	stage("create branch"){
