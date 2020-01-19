@@ -18,14 +18,7 @@ pipeline {
 			    checkout scm
 		
 		}
-			   steps{
-			   script{
-			  // echo "my branch is $branch-name"
-                bat "git branch"
-                bat "mvn clean" 
-		
-		
-            }}
+			  
         }
         
         }
