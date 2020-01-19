@@ -15,6 +15,7 @@ pipeline {
             steps {
 			    checkout scm
 			    script{
+			    echo "my branch name is"${branch-name}""
                 bat "git checkout branch "${branch-name}""
                 bat "mvn clean" 
 		}
